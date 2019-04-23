@@ -20,7 +20,7 @@ const query = {
 function lookupPerson (input) {
     client.query(query, (error,result) => {
         if (error) {
-            return console.error("error running query", err);
+            return console.error("error running query", error);
         }
         console.log(`Found ${result.rows.length} person(s) yb the name ${userInput}:`);
         result.rows.forEach( (value, i) => { 
